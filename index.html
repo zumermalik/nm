@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>noor m. // solving for the universe</title>
+    <style>
+        :root {
+            --blue: #0066FF;
+            --gray: #666;
+            --black: #000;
+            --bg: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+            line-height: 1.7;
+            color: var(--gray);
+            background-color: var(--bg);
+            transition: background-color 0.3s ease, color 0.3s ease;
+            padding: 60px 20px;
+        }
+
+        body.dark-mode {
+            --bg: #0a0a0a;
+            --gray: #aaa;
+            --black: #fff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Logo & Nav */
+        .logo {
+            font-weight: 700; /* Normal Bold */
+            font-size: 24px;
+            color: var(--black);
+            text-decoration: none;
+            letter-spacing: -1px;
+            display: block;
+            margin-bottom: 30px;
+        }
+
+        nav {
+            margin-bottom: 80px;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: var(--blue);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        /* Typography */
+        h1 {
+            color: var(--black);
+            font-size: clamp(30px, 7vw, 42px);
+            font-weight: 700; /* Normal Bold */
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+
+        h2 {
+            color: var(--gray);
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 40px;
+        }
+
+        h3 {
+            color: var(--black);
+            font-size: 22px;
+            font-weight: 700; /* Normal Bold */
+            margin-top: 50px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 19px;
+            margin-bottom: 30px;
+        }
+
+        .highlight { color: var(--black); font-weight: 500; }
+
+        /* Links */
+        a.inline-link {
+            color: var(--blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a.inline-link:hover { opacity: 0.7; }
+
+        /* Page Management */
+        .page { display: none; }
+        .page.active { display: block; animation: fadeIn 0.4s ease; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Glassmorphism Feed */
+        #medium-feed {
+            display: grid;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .post-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .post-title { font-size: 22px; font-weight: 600; color: #fff; margin-bottom: 10px; display: block; text-decoration: none; }
+        .post-date { font-size: 14px; color: #666; margin-bottom: 20px; }
+        .read-btn {
+            display: inline-block;
+            background: var(--blue);
+            color: #fff !important;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        hr { margin: 60px 0; border: 0; border-top: 1px solid rgba(0,0,0,0.08); }
+        .dark-mode hr { border-top-color: rgba(255,255,255,0.1); }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a onclick="showPage('home')" class="logo" style="cursor:pointer">NM.</a>
+
+        <nav>
+            <a onclick="showPage('home')">home</a>
+            <a onclick="showPage('love')">things i love</a>
+            <a onclick="showPage('writing')">ventures & writing</a>
+        </nav>
+
+        <!-- SECTION 1: HOME -->
+        <section id="home" class="page active">
+            <h1>noor m. // solving for the universe.</h1>
+            <h2>biology student by day. psychology obsessed by night. building ventures in between.</h2>
+
+            <p>hi i am noor m.</p>
+            
+            <p>i’m a firm believer that <span class="highlight">girls change the world</span>. i don’t just study life—i deconstruct it. whether it’s the macro-scale of astrophysics or the micro-scale of human psychology, i’m obsessed with how things work.</p>
+
+            <p>i spend my time reading people like a <a href="https://link.chess.com/play/EdCndQ" target="_blank" class="inline-link">chess match</a>, building digital ventures, and writing my thoughts into existence. i have the heart of a wolf—loyal to my vision and driven by instinct.</p>
+            
+            <p>if there’s a system to be optimized—whether it’s a business model or a biological one—i’m on it.</p>
+        </section>
+
+        <!-- SECTION 2: THINGS I LOVE -->
+        <section id="love" class="page">
+            <h1>the mental stack.</h1>
+            <p>my worldview is a mosaic of the best thinkers on the planet. i don't just "watch" content; i download it into my operating system:</p>
+
+            <h3>the existentialists</h3>
+            <p>i get my dose of cosmic wonder from <a href="https://youtube.com/@vsauce" class="inline-link">michael stevens (vsauce)</a> and the cosmic wisdom of <a href="https://www.youtube.com/@TheRoyalInstitution" class="inline-link">brian cox</a>.</p>
+
+            <h3>the architects</h3>
+            <p>i’m learning to scale my life through <a href="https://youtube.com/@danmartell" class="inline-link">dan martell</a>, finding the "why" with <a href="https://youtube.com/@simonsinek" class="inline-link">simon sinek</a>, and mastering the craft of writing via <a href="https://youtube.com/@davidperellchannel" class="inline-link">david perell</a>.</p>
+
+            <h3>the high-performers</h3>
+            <p>for my academic edge, i use the cognitive frameworks of <a href="https://youtube.com/@justinsung" class="inline-link">justin sung</a> to stay ahead.</p>
+
+            <hr>
+
+            <h1>the bio-hacking lab.</h1>
+            <p>i treat the human body like a high-performance machine. my nutrition philosophy is built on the research of the best in the game:</p>
+
+            <h3>the scientists</h3>
+            <p>following the female-specific physiology of <a href="https://youtube.com/@drstacysims" class="inline-link">dr. stacy sims</a> and the metabolic mastery of <a href="https://youtube.com/@drmindypelz" class="inline-link">dr. mindy pelz</a>.</p>
+
+            <h3>the disciplined</h3>
+            <p>i pull inspiration from <a href="https://youtube.com/@healthyemmie" class="inline-link">healthy emmie</a>, and the training discipline of <a href="https://youtube.com/@leanadeeb" class="inline-link">leana deeb</a> and <a href="https://youtube.com/@annaengelschall" class="inline-link">anna engelschall</a>.</p>
+
+            <p>i'm also deeply fascinated by <span class="highlight">wolves</span>—their social intelligence and raw instinct are a constant inspiration for how i approach leadership and life.</p>
+
+            <p><span class="highlight">the result?</span> i can design a dieting and training plan so precise you’ll see visible results. period.</p>
+        </section>
+
+        <!-- SECTION 3: VENTURES & WRITING -->
+        <section id="writing" class="page">
+            <h1>proof of work.</h1>
+            <p>i don’t just talk; i ship. from copywriting for founders to building my own ventures, i’m always in "create" mode. here are my deep dives on <a href="https://medium.com/@nurmullick0787" class="inline-link">medium</a>.</p>
+
+            <div id="medium-feed">loading deep dives...</div>
+        </section>
+
+        <footer style="margin-top: 100px; padding-bottom: 40px; font-size: 14px; opacity: 0.6;">
+            <a href="https://x.com/nurmullick0787" class="inline-link" target="_blank">twitter</a> / 
+            <a href="https://medium.com/@nurmullick0787" class="inline-link" target="_blank">medium</a>
+        </footer>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+
+            document.getElementById(pageId).classList.add('active');
+
+            if (pageId === 'writing') {
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+            }
+            window.scrollTo(0,0);
+        }
+
+        async function fetchMediumPosts() {
+            const rssUrl = 'https://medium.com/feed/@nurmullick0787';
+            const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
+            
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                const container = document.getElementById('medium-feed');
+                
+                if (data.status === 'ok') {
+                    container.innerHTML = '';
+                    data.items.forEach(item => {
+                        const date = new Date(item.pubDate).toLocaleDateString('en-US', {
+                            year: 'numeric', month: 'short', day: 'numeric'
+                        });
+                        container.innerHTML += `
+                            <div class="post-card">
+                                <a href="${item.link}" target="_blank" class="post-title">${item.title}</a>
+                                <div class="post-date">${date}</div>
+                                <a href="${item.link}" target="_blank" class="read-btn">read post</a>
+                            </div>
+                        `;
+                    });
+                } else {
+                    container.innerHTML = 'unable to load posts.';
+                }
+            } catch (err) {
+                document.getElementById('medium-feed').innerHTML = 'failed to fetch medium feed.';
+            }
+        }
+
+        fetchMediumPosts();
+    </script>
+</body>
+</html>
